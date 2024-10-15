@@ -20,3 +20,23 @@ retorna o numero inteiro que corresponde ao tamanho da lista
 ```
     len(lista)
 ```
+
+### Pegar partes expecificas de uma lista
+
+#### Pega até um determinado ponto do começo
+
+```
+    lista := []int{4, 9, 6, 7, 0, 5, 8, 5, 3}
+    lista2 := lista[:3] // pega os tres primeiros itens da lista
+```
+
+lista2 = {4, 9, 6}
+
+#### Pega apartir de um ponto até o final da lista
+
+```
+    lista := []int{4, 9, 6, 7, 0, 5, 8, 5, 3}
+    lista2 := lista[4:] // pega os tres primeiros itens da lista
+```
+
+lista2 = {0, 5, 8, 5, 3}
