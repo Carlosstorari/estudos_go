@@ -8,11 +8,13 @@ func main() {
 	fmt.Println(mapEstatico)
 
 
-	
+
 	m := make(map[string]int)
 
 	m["sp"] = 1000000
 	m["cg"] = 900000
+	m["rj"] = 600000
+	delete(m, "rj")
 
 	valor, existe := m["rj"]
 	
@@ -20,5 +22,9 @@ func main() {
 		fmt.Println(valor)
 	} else {
 		fmt.Println("Valor nao existe")
+	}
+
+	for chave, valor := range m {
+		fmt.Println("Cidade", chave, "H:", valor)
 	}
 }
