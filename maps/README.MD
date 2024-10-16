@@ -8,6 +8,8 @@
 
 ### Criando Map vazio para inserir valores depois
 
+É possivel criar um novo map vazio usando o `make`
+
 ```go
     m := make(map[string]int) // cria map
 
@@ -40,7 +42,7 @@ Essa verificação pode ser feita de outra forma também
 
 ### Iterando por um map com for
 
-Para iterar por um map é usado o range
+Para iterar por um map é usado o `range`
 
 ```go
 	m := make(map[string]int)
