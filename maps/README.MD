@@ -2,13 +2,13 @@
 
 ### Criando Map com valores
 
-```
+```go
     mapEstatico := map[string]int{"sp": 10000000, "cg": 900000}
 ```
 
 ### Criando Map vazio para inserir valores depois
 
-```
+```go
     m := make(map[string]int) // cria map
 
     m["sp"] = 1000000 // insere valores
@@ -19,7 +19,7 @@
 
 É possivel verificar se um valor existe dentro do map já que o map retorna mais de um valor
 
-```
+```go
     valor, existe := m["rj"]
     if existe {
 		fmt.Println(valor)
@@ -30,7 +30,7 @@
 
 Essa verificação pode ser feita de outra forma também
 
-```
+```go
     if valor, existe := m["rj"]; existe {
 		fmt.Println(valor)
 	} else {
