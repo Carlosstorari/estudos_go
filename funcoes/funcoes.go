@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func init() {
+	fmt.Println("Chama a primeira função")
+}
+
 func main() {
 	soma, subtracao, multiplicacao, divisao := Operacao(3,4)
 

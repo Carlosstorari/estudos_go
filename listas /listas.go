@@ -13,8 +13,8 @@ func main() {
 	lista1 := make([]int, 1)
 	lista1 = append(lista1, 2)
 	
-	lista2 := lista[:3]
-	lista3 :=lista[4:]
+	lista2 := lista[:3] // pega os tres primeiros itens da lista 
+	lista3 :=lista[4:] // pega todos os elementos apartir do quarto item 
 
 	fmt.Println(lista2, lista3)
 }

@@ -49,3 +49,5 @@ No trecho de codigo acima acontece o seguinte:
 - `y` recebe o endereço de memoria da variavel `x`
 - `y` é definido como ponteiro e compartilha o mesmo endereço de memoria de `x`
 - por fim `x` e `y` tem o valor 10 po compartilharem o mesmo endereço de memoria
+
+isso significa que se o valor de `x` for auterado, o de `y` também vai ser auterado

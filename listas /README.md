@@ -2,14 +2,14 @@
 
 ### Criando listas
 
-```
+```go
     lista := []int{4, 9, 6, 7} // cria lista estatica
     lista1 := make([]int, 1) //cria lista dinamica do tipo int com uma posição
 ```
 
 ### Adicionando novo item na lista
 
-```
+```go
     lista1 = append(lista1, 2) // adiciona o valor 2 na lista1
 ```
 
@@ -17,7 +17,7 @@
 
 retorna o numero inteiro que corresponde ao tamanho da lista
 
-```
+```go
     len(lista)
 ```
 
@@ -25,7 +25,7 @@ retorna o numero inteiro que corresponde ao tamanho da lista
 
 #### Pega até um determinado ponto do começo
 
-```
+```go
     lista := []int{4, 9, 6, 7, 0, 5, 8, 5, 3}
     lista2 := lista[:3] // pega os tres primeiros itens da lista
 ```
@@ -34,7 +34,7 @@ lista2 = {4, 9, 6}
 
 #### Pega apartir de um ponto até o final da lista
 
-```
+```go
     lista := []int{4, 9, 6, 7, 0, 5, 8, 5, 3}
     lista2 := lista[4:] // pega os tres primeiros itens da lista
 ```
