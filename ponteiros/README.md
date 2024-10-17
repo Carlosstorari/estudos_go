@@ -87,3 +87,39 @@ Resultado:
 ```
 10
 ```
+
+### Passando ponteiros como paramentro
+
+Para definir ponteiros como parametro é só usar o `*` antes do tipo da variavel
+
+```go
+   func ImprimirValores(x *int, y *int){}
+```
+
+segue exemplo completo
+
+```go
+ func main() {
+	x := 5
+	y := &x
+	*y  = 10
+
+	ImprimirValores(&x, y)
+	fmt.Println(&x, *y)
+	fmt.Println(&x, y)
+}
+
+func ImprimirValores(x *int, y *int) {
+	*x = 20
+}
+```
+
+Resultado:
+
+```
+0xc000102040 0xc000102040
+0xc000102040 20
+0xc000102040 0xc000102040
+```
+
+repare que o endereço no print de dentro da função, é igual ao de fora
