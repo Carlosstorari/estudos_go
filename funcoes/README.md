@@ -36,7 +36,7 @@ Os retornos da função podem ser nomeados como no exemplo abaixo
 }
 ```
 
-Observe que o retorno esta vazio e na atribuição da variavel não é mais usado `:=` pois a variavel e seu tipo já foram declarados da definição da função\*\*
+Observe que o retorno esta vazio e na atribuição da variavel não é mais usado `:=` pois a variavel e seu tipo já foram declarados da definição da função
 
 ### Função init
 
