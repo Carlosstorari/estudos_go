@@ -35,6 +35,8 @@ O `x` na função main tem o endereço `0xc000012110`, já o `x` na função `Im
 
 ### Ponteiros são usados para contornar esse problema
 
+#### Sintaxe Ponteiros
+
 Para definir um ponteiro é usado o `*`
 
 ```go
@@ -51,3 +53,37 @@ No trecho de codigo acima acontece o seguinte:
 - por fim `x` e `y` tem o valor 10 po compartilharem o mesmo endereço de memoria
 
 isso significa que se o valor de `x` for auterado, o de `y` também vai ser auterado
+
+#### Endereço de memoria de ponteiro VS variavel comum
+
+Para ver qual endereço de memoria um ponteiro esta apontando no caso do `y` por exemplo, é só escrever o nome da variavel sem o `*`.
+
+```go
+   x := 5
+	y := &x
+	*y  = 10
+   fmt.Println(&x, y)
+```
+
+Resultado:
+
+```
+    0xc00010c040 0xc00010c040
+```
+
+Os dois resultados são iguais pois `x` e `y` compartilham o mesmo endereço de variavel, além disso no print do resultado o `&` é usado no `x` porque ele não é um ponteiro diferente do `y` que não precisa do `&`
+
+Caso seja necessario exibir o valor de um ponteiro o `*` também é usado
+
+```go
+   x := 5
+	y := &x
+	*y  = 10
+   fmt.Println(*y)
+```
+
+Resultado:
+
+```
+10
+```
