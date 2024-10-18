@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	model "golangestudos/struct/model"
+	"time"
 )
 
 
@@ -13,5 +14,12 @@ func main() {
 		Cidade: "Campinas",
 	}
 
-	fmt.Println(endereco)
+	pessoa := model.Pessoa {
+		Nome: "Carlos",
+		Endereco: endereco,
+		DataDeNascimento: time.Date(1995, 8, 26, 0, 0, 0, 0, time.Local),
+	}
+	idade := pessoa.IdadeAtual()
+	fmt.Println(pessoa)
+	fmt.Println(idade)
 } 
