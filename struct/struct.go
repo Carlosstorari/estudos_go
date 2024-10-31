@@ -19,7 +19,7 @@ func main() {
 		Endereco: endereco,
 		DataDeNascimento: time.Date(1995, 8, 26, 0, 0, 0, 0, time.Local),
 	}
-	idade := pessoa.IdadeAtual()
 	fmt.Println(pessoa)
-	fmt.Println(idade)
-} 
+	pessoa.CalculaIdade()
+	fmt.Println(pessoa.Idade)
+}

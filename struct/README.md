@@ -120,3 +120,55 @@ No exemplo acima o metodo `IdadeAtual` esta vinculado a struct `Pessoa` o metodo
 	}
 	idade := pessoa.IdadeAtual()
 ```
+
+### Alterando dados da struct por metodos
+
+Vamos fazer uma alteração na nossa struct, ela vai ter um novo atributo chamado `Idade` que recebe `int`. Também vamos ter o metodo
+`CalculaIdade`. O atributo `Idade` da struct `Pessoa`, vai receber `anoAtual - anoDeNascimento`
+
+```go
+package model
+
+import "time"
+
+type Pessoa struct {
+	Nome string
+	Endereco Endereco
+	DataDeNascimento time.Time
+	Idade int
+}
+
+func (p Pessoa)CalculaIdade() { // metodo dentro da struct
+	anoDeNascimento := p.DataDeNascimento.Year()
+	anoAtual := time.Now().Year()
+	p.Idade = anoAtual - anoDeNascimento
+}
+```
+
+Na função principal vai ser feito um print:
+
+```go
+	pessoa.CalculaIdade()
+	fmt.Println(pessoa.Idade)
+```
+
+**porém o resultado desse print vai ser**
+
+```
+{Carlos {Rua X 15 Campinas} 1995-08-26 00:00:00 -0300 -03 0}
+0
+```
+
+A idade esta sendo retornada como valor 0, porque isso acontece?
+Acontece porque quando quando pegamos o valor de um atributo de struct sem usar o ponteiro
+estamos apenas fazendo uma copia do atributo.
+**Por isso se quiser alterar valores dentro de uma struct, é necessário o uso de ponteiros** sendo assim
+a função `CalculaIdade()` fica da seguinte forma
+
+```go
+	func (p* Pessoa)CalculaIdade() { // metodo dentro da struct
+	anoDeNascimento := p.DataDeNascimento.Year()
+	anoAtual := time.Now().Year()
+	p.Idade = anoAtual - anoDeNascimento
+}
+```

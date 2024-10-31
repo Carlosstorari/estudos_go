@@ -6,10 +6,11 @@ type Pessoa struct {
 	Nome string
 	Endereco Endereco
 	DataDeNascimento time.Time
+	Idade int
 }
 
-func (p Pessoa)IdadeAtual() int { // metodo dentro da struct
+func (p* Pessoa)CalculaIdade() { // metodo dentro da struct 
 	anoDeNascimento := p.DataDeNascimento.Year()
 	anoAtual := time.Now().Year()
-	return anoAtual - anoDeNascimento
+	p.Idade = anoAtual - anoDeNascimento
 }
